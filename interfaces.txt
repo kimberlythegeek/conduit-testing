@@ -1,0 +1,1716 @@
+{
+    'almanac': {
+        'device.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'service.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'audit': {
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'auditorPHIDs': [(<class 'str'>, )], 'commitPHIDs': [(<class 'str'>, )], 'status': (<class 'str'>, ), 'offset': <class 'int'>, 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'auth': {
+        'logout': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'querypublickeys': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'objectPHIDs': [(<class 'str'>, )], 'keys': [(<class 'str'>, )], 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'badges': {
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'conduit': {
+        'connect': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'clientDescription': (<class 'str'>, ), 'user': (<class 'str'>, ), 'authToken': <class 'int'>, 'authSignature': (<class 'str'>, ), 'host': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'client': (<class 'str'>, ), 'clientVersion': <class 'int'>
+            }
+        }
+        ,
+        'getcapabilities': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'getcertificate': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'token': (<class 'str'>, ), 'host': (<class 'str'>, )
+            }
+        }
+        ,
+        'ping': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'conpherence': {
+        'createthread': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'title': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'message': (<class 'str'>, ), 'participantPHIDs': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'querythread': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'limit': <class 'int'>, 'offset': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'querytransaction': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'roomID': <class 'int'>, 'roomPHID': (<class 'str'>, ), 'limit': <class 'int'>, 'offset': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'updatethread': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'id': <class 'int'>, 'phid': (<class 'str'>, ), 'title': (<class 'str'>, ), 'message': (<class 'str'>, ), 'addParticipantPHIDs': [(<class 'str'>, )], 'removeParticipantPHID': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'dashboard': {
+        'panel.edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+    }
+    ,
+    'differential': {
+        'close': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'revisionID': <class 'int'>
+            }
+        }
+        ,
+        'createcomment': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'message': (<class 'str'>, ), 'action': (<class 'str'>, ), 'silent': <class 'bool'>, 'attach_inlines': <class 'bool'>
+            }
+            ,
+            'required': {
+                'revision_id': <class 'int'>
+            }
+        }
+        ,
+        'creatediff': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'bookmark': (<class 'str'>, ), 'creationMethod': (<class 'str'>, ), 'repositoryPHID': (<class 'str'>, ), 'parentRevisionID': (<class 'str'>, ), 'authorPHID': (<class 'str'>, ), 'repositoryUUID': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'changes': [<class 'dict'>], 'sourceMachine': (<class 'str'>, ), 'sourcePath': (<class 'str'>, ), 'branch': (<class 'str'>, ), 'sourceControlSystem': (<class 'str'>, ), 'sourceControlPath': (<class 'str'>, ), 'sourceControlBaseRevision': (<class 'str'>, ), 'lintStatus': (<class 'str'>, ), 'unitStatus': (<class 'str'>, )
+            }
+        }
+        ,
+        'createinline': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'revisionID': <class 'int'>, 'diffID': <class 'int'>, 'lineLength': <class 'int'>
+            }
+            ,
+            'required': {
+                'filePath': (<class 'str'>, ), 'isNewFile': <class 'bool'>, 'lineNumber': <class 'int'>, 'content': (<class 'str'>, )
+            }
+        }
+        ,
+        'createrawdiff': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'repositoryPHID': (<class 'str'>, ), 'viewPolicy': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'diff': (<class 'str'>, )
+            }
+        }
+        ,
+        'createrevision': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'user': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'diffid': <class 'int'>, 'fields': <class 'dict'>
+            }
+        }
+        ,
+        'getcommitmessage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'revision_id': <class 'int'>, 'fields': <class 'dict'>, 'edit': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'getcommitpaths': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'revision_id': <class 'int'>
+            }
+        }
+        ,
+        'getrawdiff': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'diffID': (<class 'str'>, )
+            }
+        }
+        ,
+        'parsecommitmessage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'partial': <class 'bool'>
+            }
+            ,
+            'required': {
+                'corpus': (<class 'str'>, )
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'authors': [(<class 'str'>, )], 'ccs': [(<class 'str'>, )], 'reviewers': [(<class 'str'>, )], 'paths': [<class 'tuple'>], 'commitHashes': [<class 'tuple'>], 'status': (<class 'str'>, ), 'order': (<class 'str'>, ), 'limit': <class 'int'>, 'offset': <class 'int'>, 'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'subscribers': [(<class 'str'>, )], 'responsibleUsers': [(<class 'str'>, )], 'branches': [(<class 'str'>, )]
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'querydiffs': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'revisionIDs': [<class 'int'>]
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'setdiffproperty': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'diff_id': <class 'int'>, 'name': (<class 'str'>, ), 'data': (<class 'str'>, )
+            }
+        }
+        ,
+        'updaterevision': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'id': <class 'int'>, 'diffid': <class 'int'>, 'fields': <class 'dict'>, 'message': (<class 'str'>, )
+            }
+        }
+        ,
+        'revision.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'find': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'query': (<class 'str'>, ), 'guids': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'getalldiffs': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'revision_ids': [<class 'int'>]
+            }
+        }
+        ,
+        'getdiff': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'revision_id': <class 'int'>, 'diff_id': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'getrevision': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'revision_id': <class 'int'>
+            }
+        }
+        ,
+        'getrevisioncomments': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'inlines': <class 'bool'>
+            }
+            ,
+            'required': {
+                'ids': [<class 'int'>]
+            }
+        }
+    }
+    ,
+    'diffusion': {
+        'commit.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'after': (<class 'str'>, ), 'attachments': <class 'dict'>, 'before': (<class 'str'>, ), 'constraints': <class 'dict'>, 'limit': <class 'int'>, 'order': (<class 'str'>, ), 'queryKey': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'findsymbols': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'name': (<class 'str'>, ), 'namePrefix': (<class 'str'>, ), 'context': (<class 'str'>, ), 'language': (<class 'str'>, ), 'type': (<class 'str'>, ), 'repositoryPHID': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'getrecentcommitsbypath': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'branch': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {
+                'callsign': (<class 'str'>, ), 'path': (<class 'str'>, )
+            }
+        }
+        ,
+        'querycommits': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'names': [(<class 'str'>, )], 'repositoryPHID': (<class 'str'>, ), 'needMessages': <class 'bool'>, 'bypassCache': <class 'bool'>, 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'blame': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'timeout': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'paths': [(<class 'str'>, )], 'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'branchquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'closed': <class 'bool'>, 'limit': <class 'int'>, 'offset': <class 'int'>, 'contains': (<class 'str'>, ), 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'browsequery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'path': (<class 'str'>, ), 'commit': (<class 'str'>, ), 'needValidityOnly': <class 'bool'>, 'limit': <class 'int'>, 'offset': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'commitparentsquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'diffquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'commit': (<class 'str'>, ), 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'path': (<class 'str'>, )
+            }
+        }
+        ,
+        'existsquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'filecontentquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'timeout': <class 'int'>, 'byteLimit': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'path': (<class 'str'>, ), 'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'getlintmessages': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'commit': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'repositoryPHID': (<class 'str'>, ), 'branch': (<class 'str'>, ), 'files': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'historyquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'needDirectChanges': <class 'bool'>, 'needChildChanges': <class 'bool'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, ), 'path': (<class 'str'>, ), 'offset': <class 'int'>, 'limit': <class 'int'>
+            }
+        }
+        ,
+        'internal.gitrawdiffquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'lastmodifiedquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'paths': <class 'dict'>
+            }
+        }
+        ,
+        'looksoon': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsigns': [(<class 'str'>, )], 'repositories': [(<class 'str'>, )], 'urgency': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'mergedcommitsquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'limit': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'querypaths': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'pattern': (<class 'str'>, ), 'limit': <class 'int'>, 'offset': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'path': (<class 'str'>, ), 'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'rawdiffquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'path': (<class 'str'>, ), 'timeout': <class 'int'>, 'byteLimit': <class 'int'>, 'linesOfContext': <class 'int'>, 'againstCommit': (<class 'str'>, ), 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'refsquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'commit': (<class 'str'>, )
+            }
+        }
+        ,
+        'repository.edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'repository.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'resolverefs': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'types': [(<class 'str'>, )], 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'refs': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'searchquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'commit': (<class 'str'>, ), 'limit': <class 'int'>, 'offset': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'path': (<class 'str'>, ), 'grep': (<class 'str'>, )
+            }
+        }
+        ,
+        'tagsquery': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'names': [(<class 'str'>, )], 'commit': (<class 'str'>, ), 'needMessages': <class 'bool'>, 'offset': <class 'int'>, 'limit': <class 'int'>, 'callsign': (<class 'str'>, ), 'repository': (<class 'str'>, ), 'branch': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'updatecoverage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'mode': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'repositoryPHID': (<class 'str'>, ), 'branch': (<class 'str'>, ), 'commit': (<class 'str'>, ), 'coverage': <class 'dict'>
+            }
+        }
+        ,
+        'uri.edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'createcomment': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'action': (<class 'str'>, ), 'silent': <class 'bool'>
+            }
+            ,
+            'required': {
+                'phid': (<class 'str'>, ), 'message': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'feed': {
+        'publish': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'time': <class 'int'>
+            }
+            ,
+            'required': {
+                'type': (<class 'str'>, ), 'data': <class 'dict'>
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'filterPHIDs': [(<class 'str'>, )], 'limit': <class 'int'>, 'after': <class 'int'>, 'before': <class 'int'>, 'view': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'file': {
+        'allocate': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'contentHash': (<class 'str'>, ), 'viewPolicy': (<class 'str'>, ), 'deleteAfterEpoch': <class 'int'>
+            }
+            ,
+            'required': {
+                'name': (<class 'str'>, ), 'contentLength': <class 'int'>
+            }
+        }
+        ,
+        'download': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'phid': (<class 'str'>, )
+            }
+        }
+        ,
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'phid': (<class 'str'>, ), 'id': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'querychunks': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'filePHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'upload': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'name': (<class 'str'>, ), 'viewPolicy': (<class 'str'>, ), 'canCDN': <class 'bool'>
+            }
+            ,
+            'required': {
+                'data_base64': (<class 'str'>, )
+            }
+        }
+        ,
+        'uploadchunk': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'filePHID': (<class 'str'>, ), 'byteStart': <class 'int'>, 'data': (<class 'str'>, ), 'dataEncoding': (<class 'str'>, )
+            }
+        }
+        ,
+        'uploadhash': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'hash': (<class 'str'>, ), 'name': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'flag': {
+        'delete': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'id': <class 'int'>, 'objectPHID': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'color': <class 'int'>, 'note': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'objectPHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ownerPHIDs': [(<class 'str'>, )], 'types': [(<class 'str'>, )], 'objectPHIDs': [(<class 'str'>, )], 'offset': <class 'int'>, 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'harbormaster': {
+        'createartifact': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'buildTargetPHID': (<class 'str'>, ), 'artifactKey': (<class 'str'>, ), 'artifactType': (<class 'str'>, ), 'artifactData': <class 'dict'>
+            }
+        }
+        ,
+        'queryautotargets': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'objectPHID': (<class 'str'>, ), 'targetKeys': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'querybuildables': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'buildablePHIDs': [(<class 'str'>, )], 'containerPHIDs': [(<class 'str'>, )], 'manualBuildables': <class 'bool'>, 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'querybuilds': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'buildStatuses': [(<class 'str'>, )], 'buildablePHIDs': [(<class 'str'>, )], 'buildPlanPHIDs': [(<class 'str'>, )], 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'sendmessage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'unit': [(<class 'str'>, )], 'lint': [(<class 'str'>, )]
+            }
+            ,
+            'required': {
+                'buildTargetPHID': (<class 'str'>, ), 'type': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'macro': {
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'authorPHIDs': [(<class 'str'>, )], 'phids': [(<class 'str'>, )], 'ids': [<class 'int'>], 'names': [(<class 'str'>, )], 'nameLike': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'creatememe': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'upperText': (<class 'str'>, ), 'lowerText': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'macroName': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'maniphest': {
+        'createtask': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'description': (<class 'str'>, ), 'ownerPHID': (<class 'str'>, ), 'viewPolicy': (<class 'str'>, ), 'editPolicy': (<class 'str'>, ), 'ccPHIDs': [(<class 'str'>, )], 'priority': <class 'int'>, 'projectPHIDs': [(<class 'str'>, )], 'auxiliary': <class 'dict'>
+            }
+            ,
+            'required': {
+                'title': (<class 'str'>, )
+            }
+        }
+        ,
+        'gettasktransactions': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'ids': [<class 'int'>]
+            }
+        }
+        ,
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'task_id': <class 'int'>
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'ownerPHIDs': [(<class 'str'>, )], 'authorPHIDs': [(<class 'str'>, )], 'projectPHIDs': [(<class 'str'>, )], 'ccPHIDs': [(<class 'str'>, )], 'fullText': (<class 'str'>, ), 'status': (<class 'str'>, ), 'order': (<class 'str'>, ), 'limit': <class 'int'>, 'offset': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'querystatuses': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'update': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'id': <class 'int'>, 'phid': <class 'int'>, 'title': (<class 'str'>, ), 'description': (<class 'str'>, ), 'ownerPHID': (<class 'str'>, ), 'viewPolicy': (<class 'str'>, ), 'editPolicy': (<class 'str'>, ), 'ccPHIDs': [(<class 'str'>, )], 'priority': <class 'int'>, 'projectPHIDs': [(<class 'str'>, )], 'auxiliary': <class 'dict'>, 'status': (<class 'str'>, ), 'comments': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'owners': {
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'userOwner': (<class 'str'>, ), 'projectOwner': (<class 'str'>, ), 'userAffiliated': (<class 'str'>, ), 'repositoryCallsign': (<class 'str'>, ), 'path': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'passphrase': {
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'needSecrets': <class 'bool'>, 'needPublicKeys': <class 'bool'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'paste': {
+        'create': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'title': (<class 'str'>, ), 'language': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'content': (<class 'str'>, )
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'authorPHIDs': [(<class 'str'>, )], 'after': <class 'int'>, 'limit': (<class 'str'>, )
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'paste_id': <class 'int'>
+            }
+        }
+    }
+    ,
+    'phame': {
+        'blog.edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'blog.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'post.edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'post.search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'phid': {
+        'lookup': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'names': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'phids': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'phid': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'phragment': {
+        'getpatch': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'path': (<class 'str'>, ), 'state': <class 'dict'>
+            }
+        }
+        ,
+        'queryfragments': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'paths': [(<class 'str'>, )]
+            }
+        }
+    }
+    ,
+    'phriction': {
+        'create': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'description': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'slug': (<class 'str'>, ), 'title': (<class 'str'>, ), 'content': (<class 'str'>, )
+            }
+        }
+        ,
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'title': (<class 'str'>, ), 'content': (<class 'str'>, ), 'description': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'slug': (<class 'str'>, )
+            }
+        }
+        ,
+        'history': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'slug': (<class 'str'>, )
+            }
+        }
+        ,
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'slug': (<class 'str'>, )
+            }
+        }
+    }
+    ,
+    'project': {
+        'create': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'members': [(<class 'str'>, )], 'icon': (<class 'str'>, ), 'color': (<class 'str'>, ), 'tags': [(<class 'str'>, )]
+            }
+            ,
+            'required': {
+                'name': (<class 'str'>, )
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'names': [(<class 'str'>, )], 'phids': [(<class 'str'>, )], 'slugs': [(<class 'str'>, )], 'icons': [(<class 'str'>, )], 'colors': [(<class 'str'>, )], 'status': (<class 'str'>, ), 'members': [(<class 'str'>, )], 'limit': <class 'int'>, 'offset': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'edit': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'objectIdentifier': (<class 'str'>, )
+            }
+            ,
+            'required': {
+                'transactions': [<class 'dict'>]
+            }
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'releeph': {
+        'getbranches': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'querybranches': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'productPHIDs': [(<class 'str'>, )], 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'queryproducts': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'repositoryPHIDs': [(<class 'str'>, )], 'isActive': <class 'bool'>, 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'queryrequests': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'revisionPHIDs': [(<class 'str'>, )], 'requestedCommitPHIDs': [(<class 'str'>, )]
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'request': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'branchPHID': (<class 'str'>, ), 'things': [(<class 'str'>, )], 'fields': <class 'dict'>
+            }
+        }
+    }
+    ,
+    'releephwork': {
+        'canpush': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'projectPHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'getauthorinfo': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'userPHID': (<class 'str'>, ), 'vcsType': (<class 'str'>, )
+            }
+        }
+        ,
+        'getbranch': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'branchPHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'getbranchcommitmessage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'branchPHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'getcommitmessage': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'requestPHID': (<class 'str'>, ), 'action': (<class 'str'>, )
+            }
+        }
+        ,
+        'nextrequest': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'branchPHID': (<class 'str'>, ), 'seen': <class 'dict'>
+            }
+        }
+        ,
+        'record': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'requestPHID': (<class 'str'>, ), 'action': (<class 'str'>, ), 'commitIdentifier': (<class 'str'>, )
+            }
+        }
+        ,
+        'recordpickstatus': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'dryRun': <class 'bool'>, 'details': <class 'dict'>
+            }
+            ,
+            'required': {
+                'requestPHID': (<class 'str'>, ), 'action': (<class 'str'>, ), 'ok': <class 'bool'>
+            }
+        }
+    }
+    ,
+    'remarkup': {
+        'process': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'context': (<class 'str'>, ), 'contents': [(<class 'str'>, )]
+            }
+        }
+    }
+    ,
+    'repository': {
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'ids': [<class 'int'>], 'phids': [(<class 'str'>, )], 'callsigns': [(<class 'str'>, )], 'vcsTypes': [(<class 'str'>, )], 'remoteURIs': [(<class 'str'>, )], 'uuids': [(<class 'str'>, )], 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'slowvote': {
+        'info': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'poll_id': <class 'int'>
+            }
+        }
+    }
+    ,
+    'token': {
+        'give': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'tokenPHID': (<class 'str'>, ), 'objectPHID': (<class 'str'>, )
+            }
+        }
+        ,
+        'given': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'authorPHIDs': [(<class 'str'>, )], 'objectPHIDs': [(<class 'str'>, )], 'tokenPHIDs': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+    }
+    ,
+    'user': {
+        'disable': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'phids': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'enable': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'phids': [(<class 'str'>, )]
+            }
+        }
+        ,
+        'query': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'usernames': [(<class 'str'>, )], 'emails': [(<class 'str'>, )], 'realnames': [(<class 'str'>, )], 'phids': [(<class 'str'>, )], 'ids': [<class 'int'>], 'offset': <class 'int'>, 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'whoami': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {}
+        }
+        ,
+        'search': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {
+                'queryKey': (<class 'str'>, ), 'constraints': <class 'dict'>, 'attachments': <class 'dict'>, 'order': (<class 'str'>, ), 'before': (<class 'str'>, ), 'after': (<class 'str'>, ), 'limit': <class 'int'>
+            }
+            ,
+            'required': {}
+        }
+        ,
+        'find': {
+            'formats': ['json',
+            'human'],
+            'method': 'POST',
+            'optional': {}
+            ,
+            'required': {
+                'aliases': [(<class 'str'>, )]
+            }
+        }
+    }
+}

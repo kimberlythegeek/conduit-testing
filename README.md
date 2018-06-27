@@ -16,7 +16,7 @@ do the following
 
 You will also need the following:
 
-* 2 sets of login/password credentials for accessing Phabricator in whatever evironment
+* 2 sets of login/password credentials for accessing Phabricator in whatever environment
 you are testing in
 * 2 sets of login/password credentials that are allowed to create, read, update, and delete security bugs on BugZilla in whatever environment you are testing
 * 1 additional set of login/password credentials that are not allowed to access security bugs on BugZilla in whatever environment you are testing
@@ -36,5 +36,3 @@ exist.
 To run the tests, use the following command:
 
 `pytest tests/`
-
-

@@ -1,23 +1,16 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [dev-packages]
 
-
-
 [packages]
-
 pytest = "*"
 pytest-bugzilla-notifier = "==1.1.8"
-phabricator = "*"
 requests = "*"
 python-dotenv = "*"
-
+phabricator = { git="https://github.com/kimberlythegeek/python-phabricator.git@deprecated_params_not_required"}
 
 [requires]
-
 python_version = "3.6"

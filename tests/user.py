@@ -2,6 +2,15 @@ from pytest_bugzilla_notifier.bugzilla_rest_client import BugzillaRESTClient
 from phabricator import Phabricator
 
 
+def generate_transactions(dictionary):
+    """Generate a list of Phabricator transactions."""
+    transactions = []
+    for key, value in dictionary.items():
+        transactions.append(
+            {"type": key, "value": value}
+        )
+    return transactions
+
 class User:
     def __init__(self, bug_host, bug_key, phab_host, phab_key):
         api_details = {
@@ -15,7 +24,6 @@ class User:
             token=phab_key
         )
         phab.update_interfaces()
-
         self.bugzilla = client
         self.phab = phab
 
@@ -68,38 +76,52 @@ class User:
             sourceControlPath="\/",
             sourceControlBaseRevision="62a4917ca0075386afb8d694ad8910b0e76532fa",
             unitStatus="none",
-            lintStatus="none",
-            parentRevisionID="123456",
-            authorPHID=phab.user.whoami().phid,
-            repositoryUUID="12343545"
+            lintStatus="none"
+            # parentRevisionID="123456",
+            # authorPHID=phab.user.whoami().phid,
+            # repositoryUUID="12343545"
         )
         return creatediff_response
 
-    def create_revision(self, bug_id, diff):
+    def create_revision(self, bug_id, diff, transactions=None):
         """Create a revision on Phabricator."""
-        transactions = [
-            {"type": "update", "value": str(diff.phid)},
-            {"type": "title", "value": "Commit message"},
-            {"type": "summary", "value": "Summary"},
-            {"type": "testPlan", "value": "QA create a revision"},
-            {"type": "bugzilla.bug-id", "value": str(bug_id)}
-        ]
+        if not transactions:
+            transactions = generate_transactions({
+                "update": str(diff.phid),
+                "title": "Commit message",
+                "summary": "Summary",
+                "testPlan": "QA create a revision",
+                "bugzilla.bug-id": str(bug_id)
+        })
+        else:
+            transactions = generate_transactions(transactions)
         revision = self.phab.differential.revision.edit(
             transactions=transactions
         )
         return revision
 
-    def update_revision(self, bug_id, diff, revision):
+    def update_revision(self, bug_id, diff, revision, transactions=None):
         """Update a revision on Phabricator."""
-        transactions = [
-            {"type": "update", "value": str(diff.phid)},
-            {"type": "title", "value": "Commit message"},
-            {"type": "summary", "value": "Summary"},
-            {"type": "testPlan", "value": "QA update a revision"},
-            {"type": "bugzilla.bug-id", "value": str(bug_id)}
-        ]
+        if not transactions:
+            transactions = [
+                {"type": "update", "value": str(diff.phid)},
+                {"type": "title", "value": "Commit message"},
+                {"type": "summary", "value": "Summary"},
+                {"type": "testPlan", "value": "QA update a revision"},
+                {"type": "bugzilla.bug-id", "value": str(bug_id)}
+            ]
+        else:
+            transactions = generate_transactions(transactions)
         updated_revision = self.phab.differential.revision.edit(
             transactions=transactions,
-            objectIdentifier=revision["object"]["phid"]
+            objectIdentifier=revision["object"]["id"]
         )
         return updated_revision
+
+    def search_for_revision(self, revision_id):
+        """Search for a revision on Phabricator."""
+        constraints = {"ids": [revision_id]}
+        revisionsearch_response = self.phab.differential.revision.search(
+            constraints=constraints
+        )
+        return revisionsearch_response.data[0]

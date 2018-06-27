@@ -1,5 +1,6 @@
 import os
 import pytest
+import hglib
 
 from dotenv import load_dotenv, find_dotenv
 from user import User
